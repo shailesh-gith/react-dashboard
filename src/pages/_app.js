@@ -9,6 +9,8 @@ import { useNProgress } from 'src/hooks/use-nprogress';
 import { createTheme } from 'src/theme';
 import { createEmotionCache } from 'src/utils/create-emotion-cache';
 import 'simplebar-react/dist/simplebar.min.css';
+import { Provider } from 'react-redux'
+import { store } from 'src/store';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -27,13 +29,13 @@ const App = (props) => {
     <CacheProvider value={emotionCache}>
       <Head>
         <title>
-          
         </title>
         <meta
           name="viewport"
           content="initial-scale=1, width=device-width"
         />
       </Head>
+      <Provider store={store}>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <AuthProvider>
           <ThemeProvider theme={theme}>
@@ -48,6 +50,7 @@ const App = (props) => {
           </ThemeProvider>
         </AuthProvider>
       </LocalizationProvider>
+      </Provider>
     </CacheProvider>
   );
 };

@@ -124,10 +124,10 @@ const Page = () => {
                 label="Email"
                 value="email"
               />
-              <Tab
+              {/* <Tab
                 label="Phone Number"
                 value="phoneNumber"
-              />
+              /> */}
             </Tabs>
             {method === 'email' && (
               <form
@@ -158,9 +158,9 @@ const Page = () => {
                     value={formik.values.password}
                   />
                 </Stack>
-                <FormHelperText sx={{ mt: 1 }}>
+                {/* <FormHelperText sx={{ mt: 1 }}>
                   Optionally you can skip.
-                </FormHelperText>
+                </FormHelperText> */}
                 {formik.errors.submit && (
                   <Typography
                     color="error"
@@ -179,14 +179,14 @@ const Page = () => {
                 >
                   Continue
                 </Button>
-                <Button
+                {/* <Button
                   fullWidth
                   size="large"
                   sx={{ mt: 3 }}
                   onClick={handleSkip}
                 >
                   Skip authentication
-                </Button>
+                </Button> */}
                 <Alert
                   color="primary"
                   severity="info"
@@ -198,7 +198,7 @@ const Page = () => {
                 </Alert>
               </form>
             )}
-            {method === 'phoneNumber' && (
+            {/* {method === 'phoneNumber' && (
               <div>
                 <Typography
                   sx={{ mb: 1 }}
@@ -210,7 +210,7 @@ const Page = () => {
                   To prevent unnecessary costs we disabled this feature in the demo.
                 </Typography>
               </div>
-            )}
+            )} */}
           </div>
         </Box>
       </Box>
